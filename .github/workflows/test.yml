@@ -5,7 +5,7 @@
 #
 # Copyright (C) 2020 KFERMercer
 #
-name: OpenWrt-biull
+name: test
 
 on:
         workflow_dispatch
@@ -13,7 +13,7 @@ jobs:
 
   build_openwrt:
 
-    name: biull
+    name: start
 
     runs-on: ubuntu-20.04
 

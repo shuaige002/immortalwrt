@@ -43,7 +43,7 @@ jobs:
 
       - name: Compile firmware
         run:
-          make -j$(nproc) V=sc
+          make -j$(nproc) V=s 2>&1 | tee >(grep -E '(^|[^[:alnum:]])(error|warning)(:|\s|$)' >&2) | cat > /dev/null
 
       - name: Upload firmware
         uses: actions/upload-artifact@v4
